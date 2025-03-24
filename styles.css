@@ -1,0 +1,96 @@
+/* Base styles */
+:root {
+    --primary: #2A9D8F;
+    --secondary: #264653;
+    --accent: #E9C46A;
+    --text: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtext {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+/* Feature Sections */
+.feature {
+    padding: 4rem 1rem;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.feature-image {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.feature-content h2 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Alternating layouts */
+.left-image {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .left-image {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .feature:nth-child(even) .feature-content {
+        order: -1;
+    }
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: var(--secondary);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Final CTA Section */
+.cta-final {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #f8f9fa;
+}
